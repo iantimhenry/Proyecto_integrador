@@ -2,6 +2,7 @@
 Ian Timothy Henry Suárez
 A01701578
 */
+
 #include<iostream>
 #include<string>
 using namespace std;
@@ -14,7 +15,10 @@ using namespace std;
 #include "Catalogo.h"
 
 int main(){
-  //Creamos los objetos departamentos 
+
+//Casos de prueba
+
+  //Creamos los objetos de la clase Departamento
   Departamento d1("departamento", 0);
   d1.setNombre("Loma Dorada #15");
   d1.setPrecioNoche(2000);
@@ -28,6 +32,7 @@ int main(){
   d3.setPrecioNoche(4000);
 
   //Agregamos los departamentos al catálogo
+  //Usamos una agregacióón para crear el catalogo con base en los abjetos previamente creados
   Catalogo c1("Catalogo 1");
   c1.agregaDepartamento(d1);
   c1.agregaDepartamento(d2);
@@ -35,6 +40,8 @@ int main(){
   c1.mostrarCatalogo();
 
   //Capturamos los datos de las reservas 
+  //En el constructor de la clase "Reserva" también costruimos dos objetos de la clase "Fecha" por medio de una composición 
+  //También unsamos una agregación con el objeto d2 en el constructor
   Reserva r1("Ramiro", 05,12,2019, 20,12,2019, d2);
   r1.calcularMonto();
   r1.mostrarReserva();

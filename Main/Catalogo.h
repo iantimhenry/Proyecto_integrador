@@ -13,6 +13,8 @@ class Catalogo{
     int tempDepartamentos;
     string nombre;
   public:
+  //No usamos getters ni setters
+  //Usamos una función para agregar departamentos y otra para mostrarlo
     Catalogo();
     Catalogo(string);
     void agregaDepartamento(Departamento);
@@ -27,7 +29,7 @@ Catalogo::Catalogo(string _nombre){
   nombre=_nombre;
 }
 
-//Función para agregar departamentos al catáálogo
+//Función para agregar departamentos al catálogo
 void Catalogo::agregaDepartamento(Departamento d){
   departamentos[tempDepartamentos]=d;
   tempDepartamentos++;

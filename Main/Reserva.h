@@ -16,18 +16,13 @@ class Reserva{
     float monto;
     Departamento dpto;
   public:
+  //
     Reserva();
     Reserva(string, int, int, int, int, int, int, Departamento);
     void setHuesped(string);
-    void setEntrada(Fecha);
-    void setSalida(Fecha);
     string getHuesped();
-    Fecha getEntrada();
-    Fecha getSalida();
     void calcularMonto();
-    void mostrarReserva();
-
-  
+    void mostrarReserva();  
 };
 
 Reserva::Reserva(){
@@ -43,24 +38,8 @@ void Reserva::setHuesped(string _huesped){
   huesped=_huesped;
 }
 
-void Reserva::setEntrada(Fecha _entrada){
-  entrada=_entrada;
-}
-
-void Reserva::setSalida(Fecha _salida){
-  salida=_salida;
-}
-
 string Reserva::getHuesped(){
   return huesped;
-}
-
-Fecha Reserva::getEntrada(){
-  return entrada;
-}
-
-Fecha Reserva::getSalida(){
-  return salida;
 }
 
 //Creamos una función para calcular el monto.
