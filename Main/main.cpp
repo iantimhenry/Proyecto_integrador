@@ -35,7 +35,6 @@ int main(){
   c1.mostrarCatalogo();
 
   //Capturamos los datos de las reservas 
-
   Reserva r1("Ramiro", 05,12,2019, 20,12,2019, d2);
   r1.calcularMonto();
   r1.mostrarReserva();
